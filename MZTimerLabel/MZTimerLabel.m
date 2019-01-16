@@ -394,7 +394,8 @@
                     self.timeLabel.text = labelText;
                 }
             } else {
-                self.timeLabel.text = [self.dateFormatter stringFromDate:timeToShow];
+		//Support for Digital Coupon
+                self.timeLabel.text = [NSString stringWithFormat:@"Expires in: %@", [self.dateFormatter stringFromDate:timeToShow]];
             }
         }
     }
